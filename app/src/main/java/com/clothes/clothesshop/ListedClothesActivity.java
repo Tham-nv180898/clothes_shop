@@ -1,4 +1,4 @@
-package com.food.foodapplication;
+package com.clothes.clothesshop;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
@@ -13,16 +13,16 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class ListedFoodActivity extends AppCompatActivity {
+public class ListedClothesActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
     ArrayList<ModelItems> listedItem;
-    FoodAdapter foodAdapter;
+    ClothesAdapter foodAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_listed_food);
+        setContentView(R.layout.activity_listed_clothes);
 
         ActionBar actionBar;
         actionBar = getSupportActionBar();
@@ -32,17 +32,17 @@ public class ListedFoodActivity extends AppCompatActivity {
         recyclerView =findViewById(R.id.recyclerview);
         listedItem = new ArrayList<>();
 
-        listedItem.add(new ModelItems(R.drawable.hamburger, "Hamburger"));
-        listedItem.add(new ModelItems(R.drawable.bread, "Bread"));
-        listedItem.add(new ModelItems(R.drawable.nacho_cake, "Nacho Cake"));
-        listedItem.add(new ModelItems(R.drawable.header_food, "Noodle"));
-        listedItem.add(new ModelItems(R.drawable.piza_cake, "Pizza Cake"));
-        listedItem.add(new ModelItems(R.drawable.bbq, " Barbecue"));
+        listedItem.add(new ModelItems(R.drawable.image1, "t-shirt model 1", "100.00"));
+        listedItem.add(new ModelItems(R.drawable.image2, "t-shirt model 2", "150.00"));
+        listedItem.add(new ModelItems(R.drawable.image3, "t-shirt model 3", "90.00"));
+        listedItem.add(new ModelItems(R.drawable.image4, "t-shirt model 4", "110.00"));
+        listedItem.add(new ModelItems(R.drawable.image5, "t-shirt model 5", "130.00"));
+        listedItem.add(new ModelItems(R.drawable.image6, "t-shirt model 6", "120.00"));
 
-        foodAdapter = new FoodAdapter(ListedFoodActivity.this, listedItem);
+        foodAdapter = new ClothesAdapter(ListedClothesActivity.this, listedItem);
         recyclerView.setAdapter(foodAdapter);
 
-        LinearLayoutManager manager = new LinearLayoutManager(ListedFoodActivity.this);
+        LinearLayoutManager manager = new LinearLayoutManager(ListedClothesActivity.this);
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(recyclerView.getContext(),
                 LinearLayoutManager.VERTICAL);
         recyclerView.addItemDecoration(dividerItemDecoration);

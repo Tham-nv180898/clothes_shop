@@ -14,11 +14,30 @@
         android:layout_marginTop="10dp"
         android:padding="10dp"
         android:scaleType="centerCrop" />
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:text="ingredients:"
+        android:textColor="@color/design_default_color_error"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/detail_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:padding="10dp"
+        android:text= "The product is made of durable cotton material that is very comfortable to wear. give us a great feeling"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
 
     <RelativeLayout
         android:id="@+id/label"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="10dp">
 
         <TextView
@@ -26,28 +45,43 @@
             android:layout_height="match_parent"
             android:layout_alignParentStart="true"
             android:layout_marginStart="10dp"
-            android:text="ingredients:"
-            android:textColor="@color/design_default_color_error"
+            android:text="amount:"
+            android:textColor="#5E5858"
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <ImageButton
-            android:id="@+id/likeButton"
-            android:layout_width="50dp"
-            android:layout_height="match_parent"
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="10dp"
-            android:background="@color/white"
-            android:src="@drawable/like" />
+            android:orientation="horizontal"
+            android:background="@color/white" >
+            <Button
+                android:id="@+id/plus_button"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:text="+" />
+            <TextView
+                android:id="@+id/count_text"
+                android:layout_width="70dp"
+                android:layout_height="50dp"
+                android:textAlignment="center"
+                android:text="0"/>
+            <Button
+                android:id="@+id/minus_button"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:text="-" />
+            <Button
+                android:id="@+id/bye_button"
+                android:layout_marginStart="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:paddingStart="10dp"
+                android:drawableStart="@drawable/ic_buy"
+                android:background="@drawable/bg_button"
+                android:text="buy" />
+        </LinearLayout>
     </RelativeLayout>
-
-    <TextView
-        android:id="@+id/detail_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:padding="10dp"
-        android:text="This is a delicious dish we created. It is combined from natural ingredients to give users a variety of experiences."
-        android:textColor="@color/black"
-        android:textSize="16sp" />
 </LinearLayout>

@@ -5,17 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ListedFoodActivity">
+    tools:context=".ListedClothesActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Menu Food"
-        android:textSize="30dp"
-        android:layout_gravity="center"
-        android:textStyle="bold"
-        android:padding="15dp"
-        android:textColor="#de2422"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview"

@@ -1,5 +1,6 @@
-package com.food.foodapplication;
+package com.clothes.clothesshop;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -13,29 +14,31 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.Holder> {
+public class ClothesAdapter extends RecyclerView.Adapter<ClothesAdapter.Holder> {
 
     private Context context;
     private ArrayList<ModelItems> list;
 
-    public FoodAdapter(Context context, ArrayList<ModelItems> list) {
+    public ClothesAdapter(Context context, ArrayList<ModelItems> list) {
         this.context = context;
         this.list = list;
     }
 
     @NonNull
     @Override
-    public FoodAdapter.Holder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ClothesAdapter.Holder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater =LayoutInflater.from(context);
         View view = inflater.inflate(R.layout.item_list, parent, false);
         return new Holder(view);
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
-    public void onBindViewHolder(@NonNull FoodAdapter.Holder holder, int position) {
+    public void onBindViewHolder(@NonNull ClothesAdapter.Holder holder, int position) {
         ModelItems modelItems = list.get(position);
         holder.imgView.setImageResource(modelItems.getImagePath());
         holder.titleView.setText(modelItems.getTitle());
+        holder.priceText.setText(holder.priceText.getText() + modelItems.getPrice());
         holder.imgView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -53,13 +56,14 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.Holder> {
 
     public class Holder extends RecyclerView.ViewHolder {
         ImageView imgView;
-        TextView titleView;
+        TextView titleView, priceText;
 
         public Holder(@NonNull View itemView) {
             super(itemView);
 
-            imgView = itemView.findViewById(R.id.food_image);
+            imgView = itemView.findViewById(R.id.price_image);
             titleView = itemView.findViewById(R.id.title_text);
+            priceText = itemView.findViewById(R.id.price_text);
         }
     }
 }

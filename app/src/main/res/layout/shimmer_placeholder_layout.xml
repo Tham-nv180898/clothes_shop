@@ -6,7 +6,7 @@
     android:padding="5dp">
 
     <ImageView
-        android:id="@+id/food_image"
+        android:id="@+id/clothes_image"
         android:layout_width="match_parent"
         android:scaleType="centerCrop"
         android:background="@android:color/darker_gray"

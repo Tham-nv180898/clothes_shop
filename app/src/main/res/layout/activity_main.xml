@@ -4,63 +4,71 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#8EF1E8"
+    android:gravity="center"
     android:orientation="vertical"
-    android:background="#FFFFFF"
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:background="#CDDC39"
-        android:gravity="center"
-        android:orientation="vertical">
-
-        <TextView
-            android:padding="15dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Food Menu"
-            android:textSize="34dp"
-            android:textStyle="bold"
-            android:layout_gravity="center"
-            android:textAlignment="center"
-            android:textColor="#E91E63"/>
-    </LinearLayout>
-
-    <ImageView
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:layout_gravity="center"
-        android:layout_margin="60dp"
-        android:scaleType="centerCrop"
-        android:elevation="15dp"
-        android:src="@drawable/heeder_image" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:orientation="horizontal">
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_food"
+        <Button
+            android:id="@+id/button_1"
             android:layout_width="180dp"
-            android:layout_height="80dp"
-            android:drawableStart="@drawable/list"
-            android:background="#00BCD4"
-            android:text="Famous Food"
-            android:padding="15dp"/>
+            android:layout_height="180dp"
+            android:background="@drawable/bg_image1"
+            android:drawableTop="@drawable/ic_t_shirt"
+            android:drawablePadding="10dp"
+            android:elevation="8dp"
+            android:paddingTop="20dp"
+            android:text="T-shirt" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_favorite"
+        <Button
+            android:id="@+id/button_2"
             android:layout_width="180dp"
-            android:layout_marginLeft="10dp"
-            android:layout_height="80dp"
-            android:background="#E91E63"
-            android:drawableStart="@drawable/favorite"
-            android:text="favorite food"
-            android:padding="15dp"/>
+            android:layout_height="180dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/bg_image2"
+            android:drawableTop="@drawable/ic_skirt"
+            android:drawablePadding="10dp"
+            android:elevation="8dp"
+            android:paddingTop="20dp"
+            android:text="Skirt" />
 
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_3"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:background="@drawable/bg_image3"
+            android:drawableTop="@drawable/ic_sweater"
+            android:drawablePadding="10dp"
+            android:elevation="8dp"
+            android:paddingTop="20dp"
+            android:text="Sweater" />
+
+        <Button
+            android:id="@+id/button_4"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/bg_image4"
+            android:drawableTop="@drawable/ic_coat"
+            android:drawablePadding="10dp"
+            android:elevation="8dp"
+            android:paddingTop="20dp"
+            android:text="Coat" />
+
+    </LinearLayout>
+
 
 </LinearLayout>
